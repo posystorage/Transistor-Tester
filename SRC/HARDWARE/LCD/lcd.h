@@ -21,15 +21,9 @@
 
 void TSF8H_init(void);
 void TSF8H_clr(unsigned int color);
-void TSF8H_dis_BMP(const unsigned char *BMP);
 void Set_show_windows(uint8_t x1,uint8_t y1,uint8_t x2,uint8_t y2);
 void Set_Position(uint8_t x,uint8_t y);
 void Display_Point(uint8_t x,uint8_t y,uint16_t Color);
-uint16_t LCD_ReadPoint(uint8_t x,uint8_t y);
-
-void Display_Gray(void);
-void Display_RGB(void);
-void Display_FullColorline(void);
 
 void LCD_DrawLine(uint16_t x1, uint16_t y1, uint16_t x2, uint16_t y2,uint16_t color);
 void LCD_DrawRectangle(uint16_t x1, uint16_t y1, uint16_t x2, uint16_t y2,uint16_t color);
