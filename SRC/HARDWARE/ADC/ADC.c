@@ -1,4 +1,7 @@
 #include "ADC.h"
+uint32_t ADC_Dat[8];
+uint32_t ADC_Vol_Dat[8];
+
 
 void  Adc_Init(void)
 { 	
@@ -65,3 +68,29 @@ u16 Get_Adc_Average(u8 ch,u8 times)
 	}
 	return temp_val/times;
 } 
+
+void Get_All_ADC_DAT(void)
+{
+	u8 i;
+	for(i=0;i<8;i++)ADC_Dat[i]=0;
+	for(i=0;i<Sample_Times;i++)
+	{
+		ADC_Dat[0]+=Get_Adc(VIN_BAT_CH);
+		ADC_Dat[1]+=Get_Adc(VIN_X1_CH);
+		ADC_Dat[2]+=Get_Adc(VIN_X2_CH);
+		ADC_Dat[3]+=Get_Adc(VIN_VREF_CH);
+		ADC_Dat[4]+=Get_Adc(VIN_Y1_CH);
+		ADC_Dat[5]+=Get_Adc(VIN_Y2_CH);
+		ADC_Dat[6]+=Get_Adc(VIN_Z1_CH);
+		ADC_Dat[7]+=Get_Adc(VIN_Z2_CH);
+	}
+	for(i=0;i<8;i++)ADC_Dat[i]/=Sample_Times;
+	ADC_Vol_Dat[0]=ADC_Dat[0]*Reference_Vol*2/ADC_Dat[3];//电池电压
+	ADC_Vol_Dat[1]=ADC_Dat[1]*Reference_Vol/ADC_Dat[3];//x1
+	ADC_Vol_Dat[2]=ADC_Dat[2]*Reference_Vol/ADC_Dat[3];//x2
+	ADC_Vol_Dat[3]=4096*Reference_Vol/ADC_Dat[3];//系统电压
+	ADC_Vol_Dat[4]=ADC_Dat[4]*Reference_Vol/ADC_Dat[3];//y1
+	ADC_Vol_Dat[5]=ADC_Dat[5]*Reference_Vol/ADC_Dat[3];//y2
+	ADC_Vol_Dat[6]=ADC_Dat[6]*Reference_Vol/ADC_Dat[3];//z1
+	ADC_Vol_Dat[7]=ADC_Dat[7]*Reference_Vol/ADC_Dat[3];//z2
+}

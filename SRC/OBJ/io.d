@@ -29,3 +29,6 @@
 ..\obj\io.o: ..\STM32F10x_FWLib\inc\stm32f10x_usart.h
 ..\obj\io.o: ..\STM32F10x_FWLib\inc\stm32f10x_wwdg.h
 ..\obj\io.o: ..\STM32F10x_FWLib\inc\misc.h
+..\obj\io.o: ..\HARDWARE\ADC\ADC.h
+..\obj\io.o: ..\SYSTEM\delay\delay.h
+..\obj\io.o: ..\SYSTEM\sys\sys.h

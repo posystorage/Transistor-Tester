@@ -430,13 +430,6 @@ void LCD_ShowxNum(uint16_t x,uint16_t y,uint32_t num,uint8_t len,uint8_t size,ui
 	}
 } 
 
-//读取指定地址的半字(16位数据)
-//faddr:读地址(此地址必须为2的倍数!!)
-//返回值:对应数据.
-u16 STMFLASH_ReadHalfWord(u32 faddr)
-{
-	return *(vu16*)faddr; 
-}
 
 
 void GetGBKCode_from_flash(unsigned short int* pBuffer,const unsigned char * c)

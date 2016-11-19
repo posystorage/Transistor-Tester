@@ -365,7 +365,7 @@
               <MiscControls></MiscControls>
               <Define>STM32F10X_MD,USE_STDPERIPH_DRIVER</Define>
               <Undefine></Undefine>
-              <IncludePath>..\HARDWARE\LCD;..\SYSTEM\delay;..\SYSTEM\sys;..\SYSTEM\usart;..\USER;..\STM32F10x_FWLib\inc;..\CORE;..\USB\CONFIG;..\USB\STM32_USB-FS-Device_Driver\inc;..\HARDWARE\ADC;..\HARDWARE\IO</IncludePath>
+              <IncludePath>..\HARDWARE\LCD;..\SYSTEM\delay;..\SYSTEM\sys;..\SYSTEM\usart;..\USER;..\STM32F10x_FWLib\inc;..\CORE;..\USB\CONFIG;..\USB\STM32_USB-FS-Device_Driver\inc;..\HARDWARE\ADC;..\HARDWARE\IO;..\APP</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -447,6 +447,16 @@
               <FileName>IO.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\HARDWARE\IO\IO.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>APP</GroupName>
+          <Files>
+            <File>
+              <FileName>Meter.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\APP\Meter.c</FilePath>
             </File>
           </Files>
         </Group>

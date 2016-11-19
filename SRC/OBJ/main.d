@@ -34,6 +34,8 @@
 ..\obj\main.o: ..\HARDWARE\LCD\lcdgpio.h
 ..\obj\main.o: ..\SYSTEM\usart\usart.h
 ..\obj\main.o: H:\keil5\ARM\ARMCC\Bin\..\include\stdio.h
+..\obj\main.o: ..\HARDWARE\IO\IO.h
+..\obj\main.o: ..\HARDWARE\ADC\ADC.h
 ..\obj\main.o: ..\USB\STM32_USB-FS-Device_Driver\inc\usb_lib.h
 ..\obj\main.o: ..\USB\CONFIG\hw_config.h
 ..\obj\main.o: ..\USB\CONFIG\platform_config.h

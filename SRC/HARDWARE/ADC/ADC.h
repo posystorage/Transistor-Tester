@@ -4,6 +4,11 @@
 #include "stm32f10x.h"
 #include "delay.h"
 
+#include "IO.h"
+
+#define Reference_Vol 2490
+#define Sample_Times 16
+
 //GPIOA
 #define VIN_BAT GPIO_Pin_0
 #define VIN_X1 GPIO_Pin_1
@@ -27,6 +32,6 @@
 
 void  Adc_Init(void);
 u16 Get_Adc_Average(u8 ch,u8 times);
-
+void Get_All_ADC_DAT(void);
 
 #endif

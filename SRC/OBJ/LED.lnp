@@ -6,6 +6,7 @@
 "..\obj\lcdgpio.o"
 "..\obj\adc.o"
 "..\obj\io.o"
+"..\obj\meter.o"
 "..\obj\delay.o"
 "..\obj\sys.o"
 "..\obj\usart.o"
